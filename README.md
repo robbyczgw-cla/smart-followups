@@ -1,10 +1,23 @@
 # 💡 Smart Follow-ups
 
+### 🦎 A Clawdbot Skill
+
 > Generate contextual follow-up suggestions for your AI conversations
 
-[![ClawdHub](https://img.shields.io/badge/ClawdHub-smart--followups-22c55e?style=flat-square)](https://clawdhub.com/skills/smart-followups)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-orange?style=flat-square)](CHANGELOG.md)
+<p align="center">
+  <a href="https://clawdbot.com"><img src="https://img.shields.io/badge/🦎_Clawdbot-Skill-7c3aed?style=for-the-badge" alt="Clawdbot Skill"></a>
+  <a href="https://clawdhub.com/skills/smart-followups"><img src="https://img.shields.io/badge/ClawdHub-Install-22c55e?style=for-the-badge" alt="ClawdHub"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.0-orange?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/channels-9-blue?style=flat-square" alt="Channels">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License">
+</p>
+
+---
+
+**This is a skill for [Clawdbot](https://clawdbot.com)** — the AI assistant that works across Telegram, Discord, Signal, WhatsApp, and more.
 
 After every AI response, get **3 smart suggestions** for what to ask next:
 
@@ -25,6 +38,14 @@ After every AI response, get **3 smart suggestions** for what to ask next:
 - **⚡ Fast** — ~2 second generation time
 - **🔐 Privacy-First** — Uses your existing Clawdbot auth by default
 - **🔧 Flexible** — Multiple provider options (see below)
+
+---
+
+## 🦎 What is Clawdbot?
+
+[Clawdbot](https://clawdbot.com) is a powerful AI assistant that connects Claude to your favorite messaging apps — Telegram, Discord, Signal, WhatsApp, iMessage, and more. Skills extend Clawdbot with new capabilities.
+
+**Not using Clawdbot yet?** Check out [clawdbot.com](https://clawdbot.com) to get started!
 
 ---
 
