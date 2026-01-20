@@ -1,10 +1,12 @@
 ---
 name: smart-followups
-description: Generate contextual follow-up suggestions after AI responses. Adds a /followups command that shows 3 clickable buttons (Quick, Deep Dive, Related).
-commands:
-  - name: followups
-    aliases: [fu, next, suggest]
-    description: Generate 3 smart follow-up suggestions based on recent conversation
+description: Generate contextual follow-up suggestions after AI responses. Shows 3 clickable buttons (Quick, Deep Dive, Related) when user asks for "followups".
+triggers:
+  - followups
+  - follow-ups
+  - suggestions
+  - give me suggestions
+  - what should I ask
 channels:
   - telegram
   - discord
@@ -21,18 +23,22 @@ channels:
 
 Generate contextual follow-up suggestions for Clawdbot conversations.
 
-## Commands
+## How to Trigger
 
-| Command | Description |
-|---------|-------------|
-| `/followups` | Generate 3 follow-up suggestions |
-| `/fu` | Shortcut for /followups |
-| `/next` | Alias for /followups |
-| `/suggest` | Alias for /followups |
+Say any of these to get follow-up suggestions:
+
+| Trigger | Example |
+|---------|---------|
+| `followups` | "followups" |
+| `follow-ups` | "give me follow-ups" |
+| `suggestions` | "any suggestions?" |
+| `what next` | "what should I ask next?" |
+
+> **Note:** This is a keyword the agent recognizes, not a registered `/slash` command. Clawdbot skills are guidance docs that tell the agent how to respond.
 
 ## Usage
 
-Type `/followups` (or `/fu`) in any conversation:
+Say "followups" in any conversation:
 
 ```
 You: What is Docker?

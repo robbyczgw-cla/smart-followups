@@ -66,13 +66,13 @@ npm install
 
 ### Usage
 
-Just type `/followups` in any Clawdbot conversation:
+Just say **"followups"** (or "give me follow-ups", "suggestions") in any Clawdbot conversation:
 
 ```
 You: What is Docker?
 Bot: Docker is a containerization platform that...
 
-You: /followups
+You: followups
 
 Bot: 💡 What would you like to explore next?
 [⚡ How do I install Docker?]
@@ -81,6 +81,8 @@ Bot: 💡 What would you like to explore next?
 ```
 
 Click any button → sends that question automatically!
+
+> **Note:** This works as a keyword the agent recognizes, not as a registered `/slash` command. Clawdbot skills are guidance docs — the agent reads the SKILL.md and knows how to respond when you ask for follow-ups.
 
 ---
 
