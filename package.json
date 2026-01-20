@@ -1,7 +1,7 @@
 {
   "name": "@clawdbot/smart-followups",
   "version": "1.0.0",
-  "description": "Smart follow-up suggestions for Clawdbot - generates contextual next questions with inline buttons or text",
+  "description": "Clawdbot skill: Say 'followups' to get 3 contextual suggestions (Quick, Deep Dive, Related) as buttons or text",
   "main": "handler.js",
   "bin": {
     "followups-cli": "./cli/followups-cli.js"
@@ -39,7 +39,7 @@
     "skill": true,
     "handler": "handler.js",
     "cli": "cli/followups-cli.js",
-    "commands": ["followups", "fu", "next", "suggest"],
+    "triggers": ["followups", "follow-ups", "suggestions", "what should I ask"],
     "capabilities": [
       "inline-buttons",
       "text-fallback"
