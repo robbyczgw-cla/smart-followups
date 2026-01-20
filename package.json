@@ -1,6 +1,6 @@
 {
   "name": "@clawdbot/smart-followups",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Clawdbot skill: Say 'followups' to get 3 contextual suggestions (Quick, Deep Dive, Related) as buttons or text",
   "main": "handler.js",
   "bin": {
