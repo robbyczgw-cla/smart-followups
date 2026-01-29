@@ -19,7 +19,7 @@ smart-followups/
 ├── CHANGELOG.md               # Version history
 ├── CONTRIBUTING.md            # Contribution guidelines
 ├── examples.md                # Channel output examples
-├── handler.js                 # Clawdbot integration handler (5.6KB)
+├── handler.js                 # Moltbot integration handler (5.6KB)
 ├── INTERNAL.md                # Architecture & design docs (22KB)
 ├── LICENSE                    # MIT License
 ├── package.json               # Package metadata
@@ -27,7 +27,7 @@ smart-followups/
 ├── PROJECT_INDEX.md           # This file
 ├── QUICKSTART.md              # 5-minute setup guide
 ├── README.md                  # Main documentation
-├── SKILL.md                   # Clawdbot integration guide (9.4KB)
+├── SKILL.md                   # Moltbot integration guide (9.4KB)
 ├── test-example.json          # Sample conversation data
 └── test.sh                    # Test script
 ```
@@ -42,14 +42,14 @@ smart-followups/
 |------|---------|----------|
 | **README.md** | Feature overview, quick start | Everyone |
 | **QUICKSTART.md** | 5-minute setup instructions | New users |
-| **SKILL.md** | Clawdbot integration guide | Clawdbot users |
+| **SKILL.md** | Moltbot integration guide | Moltbot users |
 
 ### 🛠️ Core Code
 
 | File | Purpose | Lines | Key Functions |
 |------|---------|-------|---------------|
 | **cli/followups-cli.js** | Standalone CLI tool | ~300 | `generateFollowups()`, `formatOutput()`, `buildPrompt()` |
-| **handler.js** | Clawdbot integration | ~150 | `handleFollowupsCommand()`, `autoGenerateFollowups()` |
+| **handler.js** | Moltbot integration | ~150 | `handleFollowupsCommand()`, `autoGenerateFollowups()` |
 
 ### 📚 Documentation
 
@@ -57,7 +57,7 @@ smart-followups/
 |------|---------|--------|--------------|
 | **README.md** | Overview & features | 5KB | First visit |
 | **QUICKSTART.md** | Fast setup guide | 3.6KB | Getting started |
-| **SKILL.md** | Integration details | 9.4KB | Integrating with Clawdbot |
+| **SKILL.md** | Integration details | 9.4KB | Integrating with Moltbot |
 | **examples.md** | Output samples | 11.6KB | Seeing how it works |
 | **INTERNAL.md** | Architecture & design | 22KB | Understanding internals |
 | **CONTRIBUTING.md** | How to contribute | 7.2KB | Want to contribute |
@@ -90,7 +90,7 @@ smart-followups/
 **...set it up quickly**  
 → Follow [QUICKSTART.md](./QUICKSTART.md)
 
-**...integrate with Clawdbot**  
+**...integrate with Moltbot**  
 → Read [SKILL.md](./SKILL.md)
 
 **...see example outputs**  
@@ -102,7 +102,7 @@ smart-followups/
 **...contribute code**  
 → Review [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-**...use it standalone (no Clawdbot)**  
+**...use it standalone (no Moltbot)**  
 → Use `cli/followups-cli.js` directly
 
 **...modify the prompt**  
@@ -124,10 +124,10 @@ smart-followups/
    - Standalone, framework-agnostic
    - Handles API communication
    - Formats output for different channels
-   - Can be used outside Clawdbot
+   - Can be used outside Moltbot
 
 2. **Handler** (`handler.js`)
-   - Bridges Clawdbot and CLI tool
+   - Bridges Moltbot and CLI tool
    - Detects channel capabilities
    - Manages command registration
    - Handles auto-trigger mode
@@ -188,16 +188,16 @@ smart-followups/
 ## 🔗 External Links
 
 - **Anthropic API**: https://docs.anthropic.com
-- **Clawdbot**: (Add link when available)
+- **Moltbot**: (Add link when available)
 - **ClawdHub**: https://clawdhub.com (when published)
 - **Chameleon AI Chat**: https://github.com/robbyczgw-cla/Chameleon-AI-Chat (private)
-- **Issues**: https://github.com/robbyczgw-cla/clawdbot-smart-followups/issues
+- **Issues**: https://github.com/robbyczgw-cla/moltbot-smart-followups/issues
 
 ---
 
 ## 🏷️ Tags & Keywords
 
-**Primary**: clawdbot, skill, ai, follow-up, suggestions  
+**Primary**: moltbot, skill, ai, follow-up, suggestions  
 **Secondary**: telegram, discord, conversation, claude, haiku  
 **Technical**: node.js, anthropic, inline-buttons, messaging
 
@@ -235,7 +235,7 @@ Before publishing to ClawdHub:
 1. README.md - Understand features
 2. QUICKSTART.md - Set it up
 3. Test with `./test.sh`
-4. Integrate with Clawdbot via SKILL.md
+4. Integrate with Moltbot via SKILL.md
 
 ### Intermediate (Customizing)
 1. examples.md - See output variations

@@ -1,7 +1,7 @@
 {
-  "name": "@clawdbot/smart-followups",
+  "name": "@moltbot/smart-followups",
   "version": "1.0.4",
-  "description": "Clawdbot skill: Say 'followups' to get 3 contextual suggestions (Quick, Deep Dive, Related) as buttons or text",
+  "description": "Moltbot skill: Say 'followups' to get 3 contextual suggestions (Quick, Deep Dive, Related) as buttons or text",
   "main": "handler.js",
   "bin": {
     "followups-cli": "./cli/followups-cli.js"
@@ -11,7 +11,7 @@
     "demo": "echo '[{\"user\":\"What is Docker?\",\"assistant\":\"Docker is a containerization platform.\"}]' | node cli/followups-cli.js --mode text"
   },
   "keywords": [
-    "clawdbot",
+    "moltbot",
     "skill",
     "follow-up",
     "suggestions",
@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/robbyczgw-cla/smart-followups/issues"
   },
-  "clawdbot": {
+  "moltbot": {
     "skill": true,
     "handler": "handler.js",
     "cli": "cli/followups-cli.js",
@@ -58,8 +58,8 @@
     "config": {
       "provider": {
         "type": "string",
-        "default": "clawdbot",
-        "enum": ["clawdbot", "openrouter", "anthropic"],
+        "default": "moltbot",
+        "enum": ["moltbot", "openrouter", "anthropic"],
         "description": "Authentication provider"
       },
       "model": {

@@ -2,7 +2,7 @@
 
 > Complete guide for deploying Smart Follow-ups to production
 
-**Target**: Clawdbot with Telegram integration  
+**Target**: Moltbot with Telegram integration  
 **User**: Robby (@robbyczgw-cla)  
 **Status**: Ready for testing
 
@@ -70,21 +70,21 @@ This will:
 - Verify API connectivity
 - Show sample outputs
 
-### 4. Integrate with Clawdbot
+### 4. Integrate with Moltbot
 
 **Option A: Symbolic Link** (Recommended for development)
 ```bash
-ln -s /root/clawd/skills/smart-followups /path/to/clawdbot/skills/
+ln -s /root/clawd/skills/smart-followups /path/to/moltbot/skills/
 ```
 
 **Option B: Copy** (For production)
 ```bash
-cp -r /root/clawd/skills/smart-followups /path/to/clawdbot/skills/
+cp -r /root/clawd/skills/smart-followups /path/to/moltbot/skills/
 ```
 
-### 5. Configure Clawdbot
+### 5. Configure Moltbot
 
-Edit `clawdbot.config.json`:
+Edit `moltbot.config.json`:
 
 ```json
 {
@@ -103,15 +103,15 @@ Edit `clawdbot.config.json`:
 - `autoTrigger`: Start with `false`, enable after testing
 - `model`: Use `claude-haiku-4` for speed/cost
 
-### 6. Restart Clawdbot
+### 6. Restart Moltbot
 
 ```bash
-clawdbot daemon restart
+moltbot daemon restart
 ```
 
 Or if using systemd:
 ```bash
-sudo systemctl restart clawdbot
+sudo systemctl restart moltbot
 ```
 
 ---
@@ -138,7 +138,7 @@ cat test-example.json | node cli/followups-cli.js --mode telegram
 - ✅ 2 questions per category
 - ✅ No errors or warnings
 
-### Phase 2: Clawdbot Integration (10 minutes)
+### Phase 2: Moltbot Integration (10 minutes)
 
 **Test in Telegram**:
 
@@ -177,7 +177,7 @@ cat test-example.json | node cli/followups-cli.js --mode telegram
 }
 ```
 
-**Restart Clawdbot**, then test:
+**Restart Moltbot**, then test:
 
 1. **Auto-generation test**:
    ```
@@ -193,7 +193,7 @@ cat test-example.json | node cli/followups-cli.js --mode telegram
 
 3. **Disable and verify**:
    - Set `autoTrigger: false`
-   - Restart Clawdbot
+   - Restart Moltbot
    - **Expected**: No auto-suggestions, manual `/followups` still works
 
 ---
@@ -219,14 +219,14 @@ cat test-example.json | node cli/followups-cli.js --mode telegram
 
 ### Logging Setup
 
-Add to Clawdbot config:
+Add to Moltbot config:
 ```json
 {
   "logging": {
     "skills": {
       "smart-followups": {
         "level": "info",
-        "destination": "/var/log/clawdbot/smart-followups.log"
+        "destination": "/var/log/moltbot/smart-followups.log"
       }
     }
   }
@@ -333,7 +333,7 @@ queue.process(async (job) => {
 ```
 
 **3. Load Balancing**:
-- Multiple Clawdbot instances
+- Multiple Moltbot instances
 - Shared Redis cache
 - API request distribution
 
@@ -365,7 +365,7 @@ npm install
 
 **Check**:
 1. Channel detection: `console.log(channel)`
-2. Clawdbot Telegram config
+2. Moltbot Telegram config
 3. Bot permissions (inline keyboard permission)
 
 **Debug**:
@@ -390,7 +390,7 @@ If issues arise in production:
 
 ### 1. Immediate Disable
 
-Edit Clawdbot config:
+Edit Moltbot config:
 ```json
 {
   "skills": {
@@ -401,21 +401,21 @@ Edit Clawdbot config:
 }
 ```
 
-Restart: `clawdbot daemon restart`
+Restart: `moltbot daemon restart`
 
 ### 2. Revert to Previous Version
 
 ```bash
 cd /root/clawd/skills/smart-followups
 git checkout v0.9.0  # or previous tag
-clawdbot daemon restart
+moltbot daemon restart
 ```
 
 ### 3. Complete Removal
 
 ```bash
-rm -rf /path/to/clawdbot/skills/smart-followups
-clawdbot daemon restart
+rm -rf /path/to/moltbot/skills/smart-followups
+moltbot daemon restart
 ```
 
 ---
@@ -436,12 +436,12 @@ name: smart-followups
 version: 1.0.0
 description: Generate contextual follow-up suggestions with inline buttons
 author: Robby (@robbyczgw-cla)
-repository: https://github.com/robbyczgw-cla/clawdbot-smart-followups
+repository: https://github.com/robbyczgw-cla/moltbot-smart-followups
 license: MIT
 tags: [conversation, suggestions, ai, telegram, buttons]
 channels: [telegram, discord, slack, signal, imessage]
 tested_on: 
-  - clawdbot: 1.0.0
+  - moltbot: 1.0.0
   - telegram: true
   - signal: true
 screenshots:
@@ -482,7 +482,7 @@ After 1 week in production:
 - Update dependencies if needed
 
 ### Emergency Contacts
-- **Clawdbot issues**: Clawdbot team
+- **Moltbot issues**: Moltbot team
 - **API issues**: Anthropic support
 - **Skill issues**: @robbyczgw-cla
 
