@@ -1,12 +1,12 @@
 # 📱 Channel Support Guide
 
-> Complete documentation for Smart Follow-ups across all Moltbot channels
+> Complete documentation for Smart Follow-ups across all OpenClaw channels
 
 ---
 
 ## Overview
 
-Smart Follow-ups works on **every Moltbot channel**, with adaptive formatting:
+Smart Follow-ups works on **every OpenClaw channel**, with adaptive formatting:
 
 | Channel | Mode | Format | Interaction |
 |---------|------|--------|-------------|
@@ -230,7 +230,7 @@ function supportsButtons(channel, capabilities) {
 
 ## Configuration Per Channel
 
-You can override settings per channel in `moltbot.json`:
+You can override settings per channel in `openclaw.json`:
 
 ```json
 {
@@ -271,15 +271,15 @@ You can override settings per channel in `moltbot.json`:
 
 When a user clicks a button:
 1. Button sends `callback_data` containing the question
-2. Moltbot receives it as a new user message
-3. Moltbot answers the question normally
+2. OpenClaw receives it as a new user message
+3. OpenClaw answers the question normally
 
 ### Text Channels
 
 When a user replies with a number:
-1. Moltbot receives "1", "2", or "3"
+1. OpenClaw receives "1", "2", or "3"
 2. Handler maps number to the corresponding question
-3. Moltbot processes as if user typed the full question
+3. OpenClaw processes as if user typed the full question
 
 **Implementation Note:** The handler stores recent suggestions in session context to map numbers back to questions.
 
@@ -291,13 +291,13 @@ When a user replies with a number:
 
 1. Check channel config has `capabilities: ["inlineButtons"]`
 2. Verify bot has inline button permissions
-3. Try restarting Moltbot
+3. Try restarting OpenClaw
 
 ### Numbers not working on Signal
 
 1. Make sure you're replying with just the number (1, 2, or 3)
 2. Don't include other text
-3. Check Moltbot logs for errors
+3. Check OpenClaw logs for errors
 
 ### Wrong formatting on WhatsApp
 
