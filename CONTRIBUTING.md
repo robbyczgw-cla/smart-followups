@@ -303,7 +303,7 @@ Current focus areas for contributions:
 
 - **General questions**: Open a GitHub Discussion
 - **Bug reports**: GitHub Issues
-- **Security issues**: Email robby@chameleon.ai (do not open public issue)
+- **Security issues**: Open a private security advisory on GitHub (do not open public issue)
 - **Direct contact**: @robbyczgw-cla
 
 ---

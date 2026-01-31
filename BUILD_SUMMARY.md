@@ -276,7 +276,7 @@ These are documented in CHANGELOG.md as v1.1.0+ features:
 4. ⏭️ Collect initial feedback
 5. ⏭️ Iterate if needed
 
-### For User (Robby)
+### For User
 1. Set `ANTHROPIC_API_KEY` in environment
 2. Run `./verify.sh` to confirm setup
 3. Test CLI: `./test.sh`
@@ -309,7 +309,7 @@ These are documented in CHANGELOG.md as v1.1.0+ features:
 │   Polish: ⭐⭐⭐⭐⭐                       │
 │                                             │
 │   Built with care by subagent              │
-│   For: Robby (@robbyczgw-cla)              │
+│   For: @robbyczgw-cla                      │
 │   Date: January 20, 2026                   │
 │                                             │
 └─────────────────────────────────────────────┘

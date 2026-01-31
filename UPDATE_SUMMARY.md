@@ -241,7 +241,7 @@ Before considering this update complete:
 
 ## 🚀 Next Steps
 
-### For You (Robby)
+### For You
 
 1. **Set API Key**:
    ```bash

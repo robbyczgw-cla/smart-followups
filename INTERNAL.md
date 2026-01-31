@@ -3,7 +3,7 @@
 > This document captures the development history, design decisions, and architecture of the Smart Follow-ups skill.
 
 **Created:** January 20, 2026  
-**Author:** Cami (OpenClaw) with Robby  
+**Author:** OpenClaw Team  
 **Status:** v1.0.0 - Ready for testing
 
 ---
@@ -12,9 +12,9 @@
 
 ### Origin
 
-The Smart Follow-ups skill was inspired by [Chameleon AI Chat](https://github.com/robbyczgw-cla/Chameleon-AI-Chat), Robby's open-source AI chat application. Chameleon features a "Smart Follow-up Suggestions" system that generates contextual follow-up questions after every AI response.
+The Smart Follow-ups skill was inspired by [Chameleon AI Chat](https://github.com/robbyczgw-cla/Chameleon-AI-Chat), an open-source AI chat application. Chameleon features a "Smart Follow-up Suggestions" system that generates contextual follow-up questions after every AI response.
 
-Robby wanted to bring this feature to OpenClaw as a standalone skill that could work across multiple messaging channels.
+This feature was brought to OpenClaw as a standalone skill that works across multiple messaging channels.
 
 ### Initial Specification (from Chameleon)
 
@@ -30,7 +30,7 @@ Chameleon's original implementation:
 
 **Decision:** 1 suggestion per category instead of 2
 
-**Rationale (from Robby):**
+**Rationale:**
 > "Make 3 instead of 6 for here makes more sense, 6 is too much"
 
 **Benefits:**
@@ -43,8 +43,8 @@ Chameleon's original implementation:
 
 **Decision:** Use OpenClaw's existing authentication by default, not separate API keys
 
-**Robby's requirement:**
-> "Follow ups skill should use the exact same login and model and authentication... we use as auth anthropic Claude CLI token NOT Openrouter"
+**Requirement:**
+> "Follow ups skill should use the exact same login and model and authentication... NOT Openrouter"
 
 **Implementation:**
 - Default `provider: "openclaw"` uses current session's model and auth
@@ -55,7 +55,7 @@ Chameleon's original implementation:
 
 **Decision:** Follow-ups use the same model as the current chat session
 
-**Robby's requirement:**
+**Requirement:**
 > "Default should use the model the user is using for chat"
 
 **Implementation:**
@@ -217,13 +217,13 @@ readme.md → 302 redirect → dealsbe.com (spam)
 ## 🗣️ Key Quotes from Development
 
 **On button count:**
-> "Make 3 instead of 6 for here makes more sense 6 is too much" — Robby
+> "Make 3 instead of 6 for here makes more sense 6 is too much"
 
 **On authentication:**
-> "Follow ups skill should use the exact same login and model and authentication... NOT Openrouter but yeah make Openrouter a configurable option if you want" — Robby
+> "Follow ups skill should use the exact same login and model and authentication... NOT Openrouter but yeah make Openrouter a configurable option if you want"
 
 **On model consistency:**
-> "Default should use the model the user is using for chat" — Robby
+> "Default should use the model the user is using for chat"
 
 ---
 
