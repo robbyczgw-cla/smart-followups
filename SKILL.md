@@ -1,6 +1,6 @@
 ---
 name: smart-followups
-version: 1.0.6
+version: 1.0.7
 description: Generate contextual follow-up suggestions after AI responses. Shows 3 clickable buttons (Quick, Deep Dive, Related) when user asks for "followups".
 triggers:
   - followups
