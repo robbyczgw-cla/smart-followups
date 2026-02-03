@@ -1,6 +1,6 @@
 {
   "name": "@openclaw/smart-followups",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "OpenClaw skill: Say 'followups' to get 3 contextual suggestions (Quick, Deep Dive, Related) as buttons or text",
   "main": "handler.js",
   "bin": {
@@ -70,6 +70,13 @@
       "apiKey": {
         "type": "string",
         "description": "API key for openrouter/anthropic providers"
+      }
+    },
+    "requirements": {
+      "bins": ["node"],
+      "env": {
+        "OPENROUTER_API_KEY": "optional",
+        "ANTHROPIC_API_KEY": "optional"
       }
     }
   },
