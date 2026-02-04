@@ -7,10 +7,18 @@
  * Supports all OpenClaw channels with adaptive formatting:
  * - Buttons: Telegram, Discord, Slack
  * - Text: Signal, WhatsApp, iMessage, SMS, Matrix, Email
+ * 
+ * Slash Commands:
+ * - /followups - Generate follow-up suggestions
+ * - /fu - Alias for /followups
+ * - /suggestions - Alias for /followups
  */
 
 // Channels with native button support
 const BUTTON_CHANNELS = ['telegram', 'discord', 'slack'];
+
+// Recognized slash commands
+const SLASH_COMMANDS = ['/followups', '/fu', '/suggestions', '/next'];
 
 // Prompt for generating follow-ups
 const FOLLOWUPS_PROMPT = `Based on our recent conversation, generate exactly 3 follow-up questions.
@@ -196,10 +204,17 @@ module.exports = {
   },
   
   /**
-   * Message interceptor for handling number replies
+   * Message interceptor for handling number replies and slash commands
    */
   onMessage: async (ctx, next) => {
     const text = ctx.message?.text?.trim();
+    
+    // Check for slash commands
+    if (isSlashCommand(text)) {
+      // Mark as followups request for the agent
+      ctx.message._isFollowupsCommand = true;
+      ctx.message._originalCommand = text;
+    }
     
     // Check if this is a number reply to follow-ups
     if (isNumberReply(text)) {
@@ -220,7 +235,18 @@ module.exports = {
     formatButtons,
     formatTextList,
     supportsButtons,
+    isSlashCommand,
     FOLLOWUPS_PROMPT,
-    BUTTON_CHANNELS
+    BUTTON_CHANNELS,
+    SLASH_COMMANDS
   }
 };
+
+/**
+ * Check if message is a followups slash command
+ */
+function isSlashCommand(text) {
+  if (!text) return false;
+  const lower = text.toLowerCase().trim();
+  return SLASH_COMMANDS.some(cmd => lower === cmd || lower.startsWith(cmd + ' '));
+}
