@@ -250,7 +250,7 @@ Before considering this update complete:
 
 2. **Test CLI**:
    ```bash
-   cd /root/clawd/skills/smart-followups
+   cd /path/to/workspace/skills/smart-followups/
    ./test.sh
    ```
    

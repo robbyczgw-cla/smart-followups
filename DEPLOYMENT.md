@@ -48,7 +48,7 @@ source ~/.bashrc
 ### 2. Verify Installation
 
 ```bash
-cd /root/clawd/skills/smart-followups
+cd /path/to/workspace/skills/smart-followups/
 ./verify.sh
 ```
 
@@ -74,12 +74,12 @@ This will:
 
 **Option A: Symbolic Link** (Recommended for development)
 ```bash
-ln -s /root/clawd/skills/smart-followups /path/to/openclaw/skills/
+ln -s /path/to/workspace/skills/smart-followups/ /path/to/openclaw/skills/
 ```
 
 **Option B: Copy** (For production)
 ```bash
-cp -r /root/clawd/skills/smart-followups /path/to/openclaw/skills/
+cp -r /path/to/workspace/skills/smart-followups/ /path/to/openclaw/skills/
 ```
 
 ### 5. Configure OpenClaw
@@ -345,7 +345,7 @@ queue.process(async (job) => {
 
 **Solution**:
 ```bash
-cd /root/clawd/skills/smart-followups
+cd /path/to/workspace/skills/smart-followups/
 npm install
 ```
 
@@ -406,7 +406,7 @@ Restart: `openclaw daemon restart`
 ### 2. Revert to Previous Version
 
 ```bash
-cd /root/clawd/skills/smart-followups
+cd /path/to/workspace/skills/smart-followups/
 git checkout v0.9.0  # or previous tag
 openclaw daemon restart
 ```

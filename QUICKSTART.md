@@ -10,7 +10,7 @@ Get Smart Follow-ups running in under 5 minutes.
 ## 2️⃣ Installation
 
 ```bash
-cd /root/clawd/skills/smart-followups
+cd /path/to/workspace/skills/smart-followups/
 npm install
 chmod +x cli/followups-cli.js test.sh
 ```

@@ -148,7 +148,7 @@ export ANTHROPIC_API_KEY="sk-ant-your-key-here"
 
 ### 2. Verify Package
 ```bash
-cd /root/clawd/skills/smart-followups
+cd /path/to/workspace/skills/smart-followups/
 ./verify.sh
 ```
 
@@ -319,7 +319,7 @@ These are documented in CHANGELOG.md as v1.1.0+ features:
 
 ---
 
-**Package Location**: `/root/clawd/skills/smart-followups/`  
+**Package Location**: `/path/to/workspace/skills/smart-followups/`  
 **Main Entry**: `cli/followups-cli.js` (CLI) or `handler.js` (OpenClaw)  
 **Start Here**: `README.md` or `QUICKSTART.md`  
 **Total Build Time**: ~45 minutes  
