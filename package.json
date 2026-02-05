@@ -1,6 +1,6 @@
 {
   "name": "@openclaw/smart-followups",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "OpenClaw skill: Say 'followups' to get 3 contextual suggestions (Quick, Deep Dive, Related) as buttons or text",
   "main": "handler.js",
   "bin": {

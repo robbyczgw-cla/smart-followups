@@ -2,6 +2,14 @@
 
 All notable changes to Smart Follow-up Suggestions will be documented in this file.
 
+## [2.1.2] - 2026-02-05
+
+### Fixed
+- Removed hardcoded `DEFAULT_MODEL` from CLI (`cli/followups-cli.js`)
+- CLI now requires explicit `--model` flag instead of defaulting to `anthropic/claude-sonnet-4.5`
+- Updated help text to clarify model parameter is required for standalone usage
+- Aligns with OpenClaw-native pattern of using platform model defaults
+
 ## [2.1.1] - 2026-02-04
 
 - Privacy cleanup: removed hardcoded paths and personal info from docs

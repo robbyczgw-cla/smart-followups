@@ -8,7 +8,6 @@
  */
 
 // Configuration
-const DEFAULT_MODEL = 'anthropic/claude-sonnet-4.5'; // Same as OpenClaw primary model (OpenRouter format)
 const MAX_TOKENS = 1024;
 const OPENROUTER_BASE_URL = 'https://openrouter.ai/api/v1';
 
@@ -94,7 +93,11 @@ async function generateFollowups(exchanges, options = {}) {
   
   const isOpenRouter = apiKey.startsWith('sk-or-') || process.env.OPENROUTER_API_KEY;
   const prompt = buildPrompt(exchanges);
-  const model = options.model || DEFAULT_MODEL;
+  const model = options.model;
+  
+  if (!model) {
+    throw new Error('Model is required. Specify via --model flag or options.model parameter.');
+  }
   
   try {
     let text;
@@ -260,7 +263,7 @@ async function main() {
   // Parse CLI arguments
   const options = {
     mode: 'json',
-    model: DEFAULT_MODEL,
+    model: null, // Must be specified via --model flag
     context: null
   };
   
@@ -333,7 +336,7 @@ USAGE:
 OPTIONS:
   -c, --context <json>   Conversation context (JSON array or object)
   -m, --mode <mode>      Output mode: json|telegram|text|compact (default: json)
-  --model <model>        Claude model to use (default: ${DEFAULT_MODEL})
+  --model <model>        Claude model to use (required when running standalone)
   -h, --help             Show this help message
 
 CONTEXT FORMAT:
