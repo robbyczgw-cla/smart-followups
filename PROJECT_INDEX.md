@@ -44,7 +44,7 @@ smart-followups/
 | **QUICKSTART.md** | 5-minute setup instructions | New users |
 | **SKILL.md** | OpenClaw integration guide | OpenClaw users |
 
-### 🛠️ Core Code
+### 🛠 Core Code
 
 | File | Purpose | Lines | Key Functions |
 |------|---------|-------|---------------|
@@ -63,7 +63,7 @@ smart-followups/
 | **CONTRIBUTING.md** | How to contribute | 7.2KB | Want to contribute |
 | **CHANGELOG.md** | Version history | 2.3KB | Checking updates |
 
-### ⚙️ Configuration
+### ⚙ Configuration
 
 | File | Purpose |
 |------|---------|
@@ -195,7 +195,7 @@ smart-followups/
 
 ---
 
-## 🏷️ Tags & Keywords
+## 🏷 Tags & Keywords
 
 **Primary**: openclaw, skill, ai, follow-up, suggestions  
 **Secondary**: telegram, discord, conversation, claude, haiku  

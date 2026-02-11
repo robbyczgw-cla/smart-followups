@@ -239,7 +239,7 @@ User: /followups
 
 **Output**:
 ```
-⚠️ Not enough conversation context to generate follow-ups. Have a conversation first!
+⚠ Not enough conversation context to generate follow-ups. Have a conversation first!
 ```
 
 *(Ephemeral message, only visible to user)*

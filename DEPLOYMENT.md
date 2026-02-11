@@ -32,7 +32,7 @@
 
 ---
 
-## 🛠️ Installation Steps
+## 🛠 Installation Steps
 
 ### 1. Verify Installation (No API Key Needed!)
 

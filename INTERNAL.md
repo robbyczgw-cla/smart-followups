@@ -76,7 +76,7 @@ Chameleon's original implementation:
 
 ---
 
-## 🏗️ Architecture
+## 🏗 Architecture
 
 ### Handler-Based Integration
 
@@ -214,7 +214,7 @@ readme.md → 302 redirect → dealsbe.com (spam)
 
 ---
 
-## 🗣️ Key Quotes from Development
+## 🗣 Key Quotes from Development
 
 **On button count:**
 > "Make 3 instead of 6 for here makes more sense 6 is too much"

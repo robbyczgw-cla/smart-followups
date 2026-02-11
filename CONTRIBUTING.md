@@ -81,7 +81,7 @@ Documentation improvements are always welcome!
 
 ---
 
-## 🛠️ Development Setup
+## 🛠 Development Setup
 
 ### Prerequisites
 

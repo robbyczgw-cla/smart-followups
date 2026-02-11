@@ -271,10 +271,10 @@ These are documented in CHANGELOG.md as v1.1.0+ features:
 
 ### For Developer (You)
 1. ✅ Review this summary
-2. ⏭️ Test CLI with real API key
-3. ⏭️ Test Telegram integration
-4. ⏭️ Collect initial feedback
-5. ⏭️ Iterate if needed
+2. ⏭ Test CLI with real API key
+3. ⏭ Test Telegram integration
+4. ⏭ Collect initial feedback
+5. ⏭ Iterate if needed
 
 ### For User
 1. Run `./verify.sh` to confirm setup

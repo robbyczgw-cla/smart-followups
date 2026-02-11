@@ -342,13 +342,13 @@ Pull requests welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 | Feature | Telegram | Discord | Slack | Signal | WhatsApp | iMessage | SMS |
 |---------|:--------:|:-------:|:-----:|:------:|:--------:|:--------:|:---:|
-| Inline buttons | ✅ | ✅ | ✅ | ❌ | ⚠️ | ❌ | ❌ |
-| Emoji support | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Inline buttons | ✅ | ✅ | ✅ | ❌ | ⚠ | ❌ | ❌ |
+| Emoji support | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠ |
 | Markdown | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | Number replies | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Rich formatting | ✅ | ✅ | ✅ | ⚠️ | ⚠️ | ⚠️ | ❌ |
+| Rich formatting | ✅ | ✅ | ✅ | ⚠ | ⚠ | ⚠ | ❌ |
 
-**Legend:** ✅ Full support | ⚠️ Partial/limited | ❌ Not supported
+**Legend:** ✅ Full support | ⚠ Partial/limited | ❌ Not supported
 
 ---
 

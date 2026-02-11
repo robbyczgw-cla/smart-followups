@@ -2,12 +2,12 @@
 
 Get Smart Follow-ups running in under 5 minutes.
 
-## 1️⃣ Prerequisites
+## 1⃣ Prerequisites
 
 - Node.js 18+ installed
 - Anthropic API key ([get one here](https://console.anthropic.com/))
 
-## 2️⃣ Installation
+## 2⃣ Installation
 
 ```bash
 cd /path/to/workspace/skills/smart-followups/
@@ -15,7 +15,7 @@ npm install
 chmod +x cli/followups-cli.js test.sh
 ```
 
-## 3️⃣ Set API Key
+## 3⃣ Set API Key
 
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-your-key-here"
@@ -28,7 +28,7 @@ echo 'export ANTHROPIC_API_KEY="sk-ant-your-key-here"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## 4️⃣ Test It!
+## 4⃣ Test It!
 
 ### Quick Test
 ```bash
@@ -58,7 +58,7 @@ echo '[{"user":"What is Rust?","assistant":"Rust is a systems programming langua
   node cli/followups-cli.js --mode text
 ```
 
-## 5️⃣ Expected Output
+## 5⃣ Expected Output
 
 **Text mode** should look like:
 
@@ -87,7 +87,7 @@ Reply with a number (1-3) to ask that question.
 }
 ```
 
-## 6️⃣ Integrate with OpenClaw
+## 6⃣ Integrate with OpenClaw
 
 See [SKILL.md](./SKILL.md) for full integration guide.
 

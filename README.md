@@ -100,7 +100,7 @@ Click any button → sends that question automatically!
 
 ---
 
-## ⚙️ Configuration
+## ⚙ Configuration
 
 The skill works out of the box with OpenClaw's native authentication. No configuration required!
 
@@ -144,7 +144,7 @@ Works on **every OpenClaw channel** with adaptive formatting:
 
 ---
 
-## 🛠️ CLI Tool (Standalone, Optional)
+## 🛠 CLI Tool (Standalone, Optional)
 
 A standalone CLI is included for testing and scripting **outside of OpenClaw**:
 
@@ -228,7 +228,7 @@ Yes! With `provider: "openclaw"` (default), it uses whatever model your current 
 
 ---
 
-## 🏗️ Project Structure
+## 🏗 Project Structure
 
 ```
 smart-followups/
