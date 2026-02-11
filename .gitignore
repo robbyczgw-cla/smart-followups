@@ -35,3 +35,7 @@ tmp/
 temp/
 *.tmp
 node_modules/
+.cache/
+.data/
+.env.*
+!.env.example
