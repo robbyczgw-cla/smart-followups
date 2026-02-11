@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-2.0.1-orange?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/version-2.1.4-orange?style=flat-square" alt="Version">
   <img src="https://img.shields.io/badge/channels-9-blue?style=flat-square" alt="Channels">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License">
 </p>
@@ -86,75 +86,31 @@ Click any button → sends that question automatically!
 
 ---
 
-## 🔐 Authentication Options
+## 🔐 Authentication
 
-### Option 1: OpenClaw Native (Default) ⭐
+### OpenClaw Native (Default) ⭐
 
-**Uses your existing OpenClaw authentication** — same model and login as your current chat.
+**No API keys needed!** The skill uses your existing OpenClaw authentication — same model and login as your current chat.
 
-- ✅ No additional API keys needed
+- ✅ No additional API keys required
 - ✅ Uses your current session's model (Haiku/Sonnet/Opus)
 - ✅ Works out of the box
 
-```json
-{
-  "skills": {
-    "smart-followups": {
-      "provider": "openclaw"
-    }
-  }
-}
-```
-
-### Option 2: OpenRouter
-
-Use OpenRouter for model access. Requires API key.
-
-```json
-{
-  "skills": {
-    "smart-followups": {
-      "provider": "openrouter",
-      "apiKey": "${OPENROUTER_API_KEY}",
-      "model": "anthropic/claude-sonnet-4.5"
-    }
-  }
-}
-```
-
-**Get an OpenRouter API key:** [openrouter.ai/keys](https://openrouter.ai/keys)
-
-### Option 3: Direct Anthropic
-
-Use Anthropic's API directly. Requires API key.
-
-```json
-{
-  "skills": {
-    "smart-followups": {
-      "provider": "anthropic",
-      "apiKey": "${ANTHROPIC_API_KEY}",
-      "model": "claude-sonnet-4-5"
-    }
-  }
-}
-```
-
-**Get an Anthropic API key:** [console.anthropic.com](https://console.anthropic.com/)
+> **Note (v2.1.4):** The handler uses OpenClaw-native auth. External providers (OpenRouter/Anthropic) are only supported via the standalone CLI tool for testing purposes.
 
 ---
 
 ## ⚙️ Configuration
 
-Add to your `openclaw.json`:
+The skill works out of the box with OpenClaw's native authentication. No configuration required!
+
+**Optional:** Add to your `openclaw.json` if you want to customize:
 
 ```json
 {
   "skills": {
     "smart-followups": {
       "enabled": true,
-      "provider": "openclaw",
-      "model": null,
       "autoTrigger": false
     }
   }
@@ -164,9 +120,6 @@ Add to your `openclaw.json`:
 | Option | Default | Description |
 |--------|---------|-------------|
 | `enabled` | `true` | Enable/disable the skill |
-| `provider` | `"openclaw"` | Auth provider: `openclaw`, `openrouter`, `anthropic` |
-| `model` | `null` | Model override (null = inherit from session) |
-| `apiKey` | — | API key for openrouter/anthropic providers |
 | `autoTrigger` | `false` | Auto-show follow-ups after every response |
 
 ---
@@ -191,23 +144,25 @@ Works on **every OpenClaw channel** with adaptive formatting:
 
 ---
 
-## 🛠️ CLI Tool (Optional)
+## 🛠️ CLI Tool (Standalone, Optional)
 
-A standalone CLI is included for testing and scripting:
+A standalone CLI is included for testing and scripting **outside of OpenClaw**:
 
 ```bash
-# Set API key (OpenRouter or Anthropic)
+# CLI requires explicit API key and model (not connected to OpenClaw)
 export OPENROUTER_API_KEY="sk-or-..."
 
 # Generate follow-ups from JSON context
 echo '[{"user":"What is Docker?","assistant":"Docker is..."}]' | \
-  followups-cli --mode text
+  node cli/followups-cli.js --model anthropic/claude-3-haiku --mode text
 
 # Output modes: json, telegram, text, compact
-followups-cli --mode telegram < context.json
+node cli/followups-cli.js --model anthropic/claude-3-haiku --mode telegram < context.json
 ```
 
-See `followups-cli --help` for all options.
+> **Note:** The CLI is a standalone tool separate from the core skill. It requires an explicit `--model` flag and API key. The main skill uses OpenClaw-native auth.
+
+See `node cli/followups-cli.js --help` for all options.
 
 ---
 

@@ -2,6 +2,25 @@
 
 All notable changes to Smart Follow-up Suggestions will be documented in this file.
 
+## [2.1.4] - 2026-02-11
+
+### Changed
+- **OpenClaw Native Auth:** Handler now uses OpenClaw-native authentication only
+- **No External API Keys:** Removed provider configuration from openclaw metadata
+- **CLI is Standalone:** The CLI tool is now a separate, standalone tool for testing — not part of the core skill functionality
+- **Simplified Skill:** Core skill requires no configuration, works out of the box
+
+### Removed
+- Provider configuration options (`provider`, `apiKey`, `model`) from skill config
+- Support for OpenRouter/Anthropic providers in the main handler (use CLI for those)
+
+### Migration
+If you were using external providers, the CLI still supports them for testing:
+```bash
+export OPENROUTER_API_KEY="..."
+node cli/followups-cli.js --model anthropic/claude-3-haiku --mode text
+```
+
 ## [2.1.2] - 2026-02-05
 
 ### Fixed

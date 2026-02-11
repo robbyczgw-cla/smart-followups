@@ -11,8 +11,8 @@
 
 A complete, production-ready OpenClaw skill that generates contextual follow-up questions with:
 
-✅ **Standalone CLI tool** - Works independently of OpenClaw  
-✅ **OpenClaw integration** - Full handler with command support  
+✅ **OpenClaw integration** - Full handler with command support (uses native auth)  
+✅ **Standalone CLI tool** - For testing outside OpenClaw (requires API key)  
 ✅ **Multi-channel support** - Telegram buttons, Signal text, etc.  
 ✅ **Comprehensive documentation** - 9 documentation files, 25,000+ words  
 ✅ **Testing infrastructure** - Automated tests, verification scripts  
@@ -277,12 +277,12 @@ These are documented in CHANGELOG.md as v1.1.0+ features:
 5. ⏭️ Iterate if needed
 
 ### For User
-1. Set `ANTHROPIC_API_KEY` in environment
-2. Run `./verify.sh` to confirm setup
-3. Test CLI: `./test.sh`
-4. Integrate with OpenClaw Telegram bot
-5. Try `/followups` command in conversation
-6. Report any issues or suggestions
+1. Run `./verify.sh` to confirm setup
+2. Integrate with OpenClaw Telegram bot
+3. Try `/followups` command in conversation
+4. Report any issues or suggestions
+
+> **Note:** No API key needed! The skill uses OpenClaw-native auth.
 
 ---
 

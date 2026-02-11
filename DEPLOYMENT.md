@@ -12,7 +12,7 @@
 
 ### ✅ Completed
 - [x] CLI tool implemented and tested
-- [x] Handler integration completed
+- [x] Handler integration completed (uses OpenClaw-native auth)
 - [x] All documentation written
 - [x] Package structure verified
 - [x] Dependencies installed
@@ -21,8 +21,6 @@
 - [x] Test scripts created
 
 ### 🔲 Before Production
-- [ ] Set ANTHROPIC_API_KEY in production environment
-- [ ] Test CLI with real API calls
 - [ ] Test Telegram integration with live bot
 - [ ] Set up error monitoring
 - [ ] Configure rate limiting (if needed)
@@ -30,22 +28,15 @@
 - [ ] Publish to npm (optional)
 - [ ] Submit to ClawHub
 
+> **Note (v2.1.4):** No external API keys needed! The handler uses OpenClaw-native auth. Only the standalone CLI requires API keys for testing.
+
 ---
 
 ## 🛠️ Installation Steps
 
-### 1. Environment Setup
+### 1. Verify Installation (No API Key Needed!)
 
-```bash
-# Set API key (REQUIRED)
-export ANTHROPIC_API_KEY="sk-ant-your-actual-key-here"
-
-# Add to shell profile for persistence
-echo 'export ANTHROPIC_API_KEY="sk-ant-your-actual-key-here"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-### 2. Verify Installation
+The skill uses OpenClaw-native auth — no API key configuration required!
 
 ```bash
 cd /path/to/workspace/skills/smart-followups/

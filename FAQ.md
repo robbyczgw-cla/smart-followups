@@ -24,60 +24,28 @@ Type `/followups` in any OpenClaw conversation. On Telegram/Discord/Slack, you'l
 
 ---
 
-## Authentication & Providers
+## Authentication
 
-### What's the default authentication method?
+### What's the authentication method?
 
-**OpenClaw native** — the skill uses your existing OpenClaw authentication (Claude CLI token login). No additional API keys required.
+**OpenClaw native** — the skill uses your existing OpenClaw authentication. No additional API keys required!
 
-### Can I use OpenRouter instead?
+The handler uses the same model and auth as your current chat session. If you're chatting with Opus, follow-ups use Opus.
 
-Yes! Set `provider: "openrouter"` in your config and provide your OpenRouter API key:
+### Do I need any API keys?
 
-```json
-{
-  "skills": {
-    "smart-followups": {
-      "provider": "openrouter",
-      "apiKey": "sk-or-v1-..."
-    }
-  }
-}
+**No!** The skill works out of the box with OpenClaw-native auth.
+
+### What about OpenRouter/Anthropic?
+
+The standalone CLI tool supports external providers for testing purposes:
+
+```bash
+export OPENROUTER_API_KEY="sk-or-v1-..."
+node cli/followups-cli.js --model anthropic/claude-3-haiku --mode text
 ```
 
-### Can I use direct Anthropic API?
-
-Yes! Set `provider: "anthropic"` with your Anthropic API key:
-
-```json
-{
-  "skills": {
-    "smart-followups": {
-      "provider": "anthropic",
-      "apiKey": "sk-ant-..."
-    }
-  }
-}
-```
-
-### Which model does it use?
-
-- **OpenClaw native:** Uses your current session's model (if you're chatting with Opus, follow-ups use Opus)
-- **OpenRouter/Anthropic:** Defaults to Claude Sonnet 4.5, configurable via `model` setting
-
-### Can I force a specific model?
-
-Yes, set the `model` option:
-
-```json
-{
-  "skills": {
-    "smart-followups": {
-      "model": "anthropic/claude-3-haiku"
-    }
-  }
-}
-```
+But the main skill (used in OpenClaw conversations) only uses native auth.
 
 ---
 
@@ -105,27 +73,9 @@ No. Suggestions are generated on-demand and returned directly to you. Nothing is
 
 ### How much does it cost to use?
 
-- **OpenClaw native:** Part of your normal API usage, no additional cost structure
-- **OpenRouter:** ~$0.001-0.01 per generation depending on model
-- **Direct Anthropic:** ~$0.001-0.01 per generation depending on model
+**OpenClaw native:** Part of your normal API usage — no additional cost structure. The skill uses your session's model, so costs are included in your regular usage.
 
-For reference, using Claude Haiku costs ~$0.0002 per generation. Claude Sonnet costs ~$0.003-0.01.
-
-### Can I use a cheaper model for follow-ups?
-
-Yes! Even if your main chat uses Opus, you can configure follow-ups to use Haiku:
-
-```json
-{
-  "skills": {
-    "smart-followups": {
-      "provider": "openrouter",
-      "model": "anthropic/claude-3-haiku",
-      "apiKey": "..."
-    }
-  }
-}
-```
+For reference, generating follow-ups typically uses a small amount of tokens (~500-1000) per generation.
 
 ---
 
