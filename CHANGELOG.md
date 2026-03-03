@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.1.6] - 2026-03-03
+
+### Changed
+- Added prompt-injection boundary and aligned metadata/docs.
+
+
 All notable changes to Smart Follow-up Suggestions will be documented in this file.
 
 ## [2.1.4] - 2026-02-11
