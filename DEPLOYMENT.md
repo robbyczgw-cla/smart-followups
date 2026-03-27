@@ -217,7 +217,7 @@ Add to OpenClaw config:
     "skills": {
       "smart-followups": {
         "level": "info",
-        "destination": "/var/log/openclaw/smart-followups.log"
+        "destination": "YOUR_LOG_DIR/smart-followups.log"
       }
     }
   }
