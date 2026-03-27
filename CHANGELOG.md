@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.1.7] - 2026-03-27
+
+### Fixed
+- Replaced hardcoded log file path examples with portable placeholders in `DEPLOYMENT.md`
+
 ## [2.1.6] - 2026-03-03
 
 ### Changed
